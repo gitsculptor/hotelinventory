@@ -1,0 +1,33 @@
+<p>rooms works!</p>
+
+<p>{{hotelName}}
+
+{{no_of_rooms}}
+</p>
+
+<button (click)="toggle()">Click Me</button>
+
+<div *ngIf="rooms.availableRooms>0">
+    rooms are available
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>Room No</th>
+            <th>Room Type</th>
+            <th>Room Price</th>
+            <th>Room Amenties</th>
+            <th>CheckInTime</th>
+            <th>CheckoutTime</th>            
+        </tr>
+        <tr *ngFor="let room of roomList">
+            <td>{{room.id}}</td>
+            <td>{{room.roomtype}}</td>
+            <td>{{room.price}}</td>
+            <td>{{room.amenties}}</td>
+            <td>{{room.checkInTime}}</td>
+            <td>{{room.checkOutTime}}</td>
+        </tr>
+    </table>
+</div>
